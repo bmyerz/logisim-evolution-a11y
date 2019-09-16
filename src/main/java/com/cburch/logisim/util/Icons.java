@@ -35,14 +35,19 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
 
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
+import javax.accessibility.Accessible;
+import javax.accessibility.AccessibleContext;
+import javax.swing.*;
 
 import com.cburch.logisim.data.Direction;
 import com.cburch.logisim.prefs.AppPreferences;
 
-public class Icons {
-	public static ImageIcon getIcon(String name) {
+public class Icons extends JComponent implements Accessible {
+	//public static String name;
+	public static ImageIcon getIcon (String name)
+
+	{
+
 		java.net.URL url = Icons.class.getClassLoader().getResource(
 				path + "/" + name);
 		if (url == null)
@@ -52,8 +57,13 @@ public class Icons {
 				         AppPreferences.getScaled(AppPreferences.IconSize), 
 				         AppPreferences.getScaled(AppPreferences.IconSize),
 				         Image.SCALE_SMOOTH));
+		icon.setDescription(name);
 		return icon;
 	}
+
+	//public String getDescription(){
+	//	return name;
+	//}
 
 	public static void paintRotated(Graphics g, int x, int y, Direction dir,
 			Icon icon, Component dest) {
