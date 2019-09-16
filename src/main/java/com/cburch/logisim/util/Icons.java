@@ -58,12 +58,11 @@ public class Icons extends JComponent implements Accessible {
 				         AppPreferences.getScaled(AppPreferences.IconSize),
 				         Image.SCALE_SMOOTH));
 		icon.setDescription(name);
+		icon.getAccessibleContext().setAccessibleName(name);
+		icon.getAccessibleContext().setAccessibleDescription(name);
 		return icon;
 	}
 
-	//public String getDescription(){
-	//	return name;
-	//}
 
 	public static void paintRotated(Graphics g, int x, int y, Direction dir,
 			Icon icon, Component dest) {
