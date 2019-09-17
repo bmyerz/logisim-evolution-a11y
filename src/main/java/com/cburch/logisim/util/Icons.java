@@ -34,8 +34,10 @@ import java.awt.Component;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
+import java.net.URL;
 
 import javax.accessibility.Accessible;
+//import javax.accessibility.AccessibleContext;
 import javax.accessibility.AccessibleContext;
 import javax.swing.*;
 
@@ -43,12 +45,12 @@ import com.cburch.logisim.data.Direction;
 import com.cburch.logisim.prefs.AppPreferences;
 
 public class Icons extends JComponent implements Accessible {
-	//public static String name;
+	public static String name;
 	public static ImageIcon getIcon (String name)
 
 	{
 
-		java.net.URL url = Icons.class.getClassLoader().getResource(
+		URL url = Icons.class.getClassLoader().getResource(
 				path + "/" + name);
 		if (url == null)
 			return null;
@@ -59,8 +61,21 @@ public class Icons extends JComponent implements Accessible {
 				         Image.SCALE_SMOOTH));
 		icon.setDescription(name);
 		icon.getAccessibleContext().setAccessibleName(name);
-		icon.getAccessibleContext().setAccessibleDescription(name);
+		icon.getAccessibleContext().setAccessibleDescription("This is the " + name +" button.");
+		//icon.setToolTipText()
 		return icon;
+	}
+
+	@Override
+	public AccessibleContext getAccessibleContext() {
+		if (accessibleContext == null) {
+			accessibleContext = new AccessibleIcons();
+		}
+		return accessibleContext;
+	}
+
+	protected class AccessibleIcons extends AccessibleJComponent {
+
 	}
 
 
