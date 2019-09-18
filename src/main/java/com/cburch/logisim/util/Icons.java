@@ -60,13 +60,15 @@ public class Icons extends JComponent implements Accessible {
 				         AppPreferences.getScaled(AppPreferences.IconSize),
 				         Image.SCALE_SMOOTH));
 		icon.setDescription(name);
+		icon.getDescription();
 		icon.getAccessibleContext().setAccessibleName(name);
+		icon.getAccessibleContext().getAccessibleName();
 		icon.getAccessibleContext().setAccessibleDescription("This is the " + name +" button.");
+		icon.getAccessibleContext().getAccessibleDescription();
 		//icon.setToolTipText()
 		return icon;
 	}
-
-	@Override
+/*
 	public AccessibleContext getAccessibleContext() {
 		if (accessibleContext == null) {
 			accessibleContext = new AccessibleIcons();
@@ -76,7 +78,7 @@ public class Icons extends JComponent implements Accessible {
 
 	protected class AccessibleIcons extends AccessibleJComponent {
 
-	}
+	}*/
 
 
 	public static void paintRotated(Graphics g, int x, int y, Direction dir,

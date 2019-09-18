@@ -38,7 +38,7 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
-import javax.swing.Icon;
+import javax.swing.*;
 
 import com.cburch.draw.toolbar.ToolbarItem;
 import com.cburch.logisim.gui.menu.LogisimMenuItem;
@@ -46,7 +46,7 @@ import com.cburch.logisim.prefs.AppPreferences;
 import com.cburch.logisim.util.Icons;
 import com.cburch.logisim.util.StringGetter;
 
-class LogisimToolbarItem implements ToolbarItem {
+class LogisimToolbarItem extends JComponent implements ToolbarItem {
 	private MenuListener menu;
 	private Icon icon;
 	private LogisimMenuItem action;
@@ -63,8 +63,10 @@ class LogisimToolbarItem implements ToolbarItem {
 	public void doAction() {
 		if (menu != null && menu.isEnabled(action)) {
 			menu.doAction(action);
+
 		}
 	}
+
 
 	public Dimension getDimension(Object orientation) {
 		if (icon == null) {
