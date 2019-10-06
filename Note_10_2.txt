@@ -1,0 +1,35 @@
+Note for 10/2/19
+Menu:
+Each column has its own class such as MenuFile, MenuEdit, etc.
+
+getAccessibleContext().setAccessibleDescription() is called on each JMenuItem inside each class
+
+Toolbar
+Same as Menu, each column/icon has its own class such as PokeTool, EditTool, etc.
+
+Each class inherits the Tool abstract class that also implements AttributeDefaultProvider
+
+Tool is not a JComponent 
+
+Tool.properties is the place where actual tooltips and names are assigned
+
+In function getToolTip() inside the ToolItem (this is inside class LayoutToolBarModel class), ret value is where tooltips are displayed. I changed it to make it display the name, and the content of the tooltip becomes the name.
+
+getToolTip() is called on a ToolBarItem item in the function of getToolTipText in the class ToolbarButton (a JComponent). Here it seems like the message is passed upon to java accessibility
+
+Inside Icons class, there is the method of getIcon that returns an ImageIcon (accessible). This method seems like it is defining the shape and colour of the icon 
+
+getIcon() mentioned above is called on an Interface Icon (not Icons), which is NOT JComponent. Here is an example: private static final Icon toolIcon = Icons.getIcon(“poke.gif") (this is inside the PokeTool class)
+
+Misc
+Ctrl-1/2/3/4/5/6/7 is how you use keyboard shortcut to navigate the icons in toolbar. (I had narrator on previously so it was a bit messed up)
+
+At the menu bar, I modified some code so that there is tooltip (LogisimMenuBar.java)
+
+Walk through the menu columns using alt + _ / arrow key (need a starting pt). 
+
+Walk through the elements inside menu using arrow key / alt + _ 
+
+LHS middle column (where you find Wiring, Gates, Plexers … ) hover on them and they will be read out
+
+LHS lower column using arrow key and navigate the cells (starting pt needed). Info will be read out.
