@@ -45,5 +45,6 @@ I extended JComponents on Abstract class Tools and implemented Accessible interf
 Testing result: fatal, /Users/Jason/Desktop/Computer Science/Lectures/Independent Study /accessiblecircuitsdesign/src/main/java/com/cburch/logisim/tools/AddTool.java:242: error: getBounds() in AddTool cannot override getBounds() in Component
         private Bounds getBounds() {
 
+Fixed the conflict by modifying the name of the function. (-> addBoundsTool)
 
 
