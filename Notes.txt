@@ -51,4 +51,7 @@ Testing result: fatal, /Users/Jason/Desktop/Computer Science/Lectures/Independen
 
 Fixed the conflict by modifying the name of the function. (-> addBoundsTool)
 
+I extended JComponents for Icons class and implemented Accessible interface. 
+
+Result: Non-fatal. Logisim test required. 
 
