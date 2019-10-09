@@ -137,7 +137,7 @@ public class AppearanceEditHandler extends EditHandler implements
 		setEnabled(LogisimMenuBar.COPY, !selEmpty);
 		setEnabled(LogisimMenuBar.PASTE, canChange && clipExists);
 		setEnabled(LogisimMenuBar.DELETE, selHasRemovable && canChange);
-		//setEnabled(LogisimMenuBar.DUPLICATE, !selEmpty && canChange);
+		setEnabled(LogisimMenuBar.DUPLICATE, !selEmpty && canChange);
 		setEnabled(LogisimMenuBar.SELECT_ALL, true);
 		setEnabled(LogisimMenuBar.RAISE, canRaise);
 		setEnabled(LogisimMenuBar.LOWER, canLower);
