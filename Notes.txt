@@ -40,7 +40,11 @@ There exists a MouseOption class where actions will be performed once mouse is c
 
 Inside the class MouseOption, the variable curTool is a Tool interface that does not implement Accessibility 
 
-I extended JComponents on Abstract class Tools and implemented Accessible interface. 
+I extended JComponents on Abstract class Tools and implemented Accessible interface.
+
+Results: non-fatal, yet still it does not read out when key is pressed. 
+
+Assumption: Tool class might just control the object but not the actual icon. 
 
 Testing result: fatal, /Users/Jason/Desktop/Computer Science/Lectures/Independent Study /accessiblecircuitsdesign/src/main/java/com/cburch/logisim/tools/AddTool.java:242: error: getBounds() in AddTool cannot override getBounds() in Component
         private Bounds getBounds() {
