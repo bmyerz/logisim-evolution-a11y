@@ -55,3 +55,9 @@ I extended JComponents for Icons class and implemented Accessible interface.
 
 Result: Non-fatal. Logisim test required. 
 
+Circuits:
+
+Under EditTool class we found SelectTool item, a Tool that does not appear on the GUI.
+
+
+
