@@ -59,5 +59,13 @@ Circuits:
 
 Under EditTool class we found SelectTool item, a Tool that does not appear on the GUI.
 
+We want to create methods such that pressing key will result only in selection but not action.
 
+We would like to mimic the LogisimMenuBar class where the method setMnemonic is called on JMenuItem
+
+The method setMnemonic needs to be implemented only on classes that extend AbstractButton.
+
+Objects that use setMnemonic is declared and called in the parent class. For example, each component in the MenuFile, MenuEdit,... is called in the MenuFile, MenuEdit. MenuFile and MenuEdit etc. are called in the LogisimMenuBar class. 
+
+However, there is no such thing as LogisimToolBar class. A problem.
 
