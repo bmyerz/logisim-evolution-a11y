@@ -71,4 +71,5 @@ However, there is no such thing as LogisimToolBar class. A problem.
 
 Some of tools cannot be simply initialized without parameters. editTool needs SelectTool select, WiringTool wiring as its parameters. 
 
+Ctrl - F2 
 
