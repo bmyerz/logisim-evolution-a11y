@@ -73,3 +73,8 @@ Some of tools cannot be simply initialized without parameters. editTool needs Se
 
 Ctrl - F2 
 
+Created new file src/main/java/com/cburch/logisim/gui/main/LogisimToolbar.java to mimic the behaviour of Menubar in order to make Tools more accessible.
+
+Currently working on finding where logisimMenubar is being called so that I can call LogisimToolbar 
+
+
