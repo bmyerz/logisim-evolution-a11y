@@ -77,4 +77,4 @@ Created new file src/main/java/com/cburch/logisim/gui/main/LogisimToolbar.java t
 
 Currently working on finding where logisimMenubar is being called so that I can call LogisimToolbar 
 
-
+Frame, Toolbar might also be the places to insert accessibility context.
