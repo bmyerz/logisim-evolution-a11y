@@ -83,6 +83,6 @@ com.cburch.logisim.gui.main.KeyboardToolSelection involves key for tools, method
 
 com.cburch.logisim.gui.main.SimulationToolbarModel has itemselected defined (modification)
 
-
+At LogisimMenuBar, setMnemonic method is added and keyboard shortcut is enabled to access the items at the menubar. 
 
 
