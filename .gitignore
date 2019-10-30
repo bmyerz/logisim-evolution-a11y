@@ -25,5 +25,8 @@ out/
 
 # gradle
 build/
+.grade/
 *.bin
 
+# temps
+*~
