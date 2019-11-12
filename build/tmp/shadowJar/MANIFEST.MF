@@ -1,5 +1,0 @@
-Manifest-Version: 1.0
-Implementation-Title: jar
-Implementation-Version: 2.15.0
-Main-Class: com.cburch.logisim.Main
-
