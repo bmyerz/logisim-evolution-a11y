@@ -85,4 +85,6 @@ com.cburch.logisim.gui.main.SimulationToolbarModel has itemselected defined (mod
 
 At LogisimMenuBar, setMnemonic method is added and keyboard shortcut is enabled to access the items at the menubar. 
 
+At ToolbarButton.java I inserted print stmt with counter at paintComponent. The counter is not monotone.
+
 
