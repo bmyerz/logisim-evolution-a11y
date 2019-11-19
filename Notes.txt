@@ -91,3 +91,10 @@ At WiringTool.java I inserted drag print stmt to track show that the wire has be
 
 At ToolbarBuuton.java I inserted print stmt for press and release to record the action. However, if I press and release the icon without putting it on the canvas, it will be recorded. This needs to be fixed.
 
+Circuit can be defined at Circuit.java
+
+At Circuit.java, there are two methods called getAllWithin and getAllWithGraphics, the latter's name was modified in order to find out the difference. 
+
+At CircuitEvent.java, getCircuit is defined
+
+
